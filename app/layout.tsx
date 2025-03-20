@@ -30,7 +30,7 @@ export default function RootLayout({
       >
        <div className="w-full flex justify-center border-b border-[#F5F5F5]"><Navbar/></div> 
        <main className="w-full flex justify-center">
-       <div className="items-center justify-items-center w-[80%]">
+       <div className="items-center justify-items-center w-[80%] max-md:w-[90%]">
         {children}
        </div>
         </main> 

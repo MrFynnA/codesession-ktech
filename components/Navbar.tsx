@@ -7,9 +7,9 @@ import Image from 'next/image'
 
 const Navbar = () => {
   return (
-    <div className='h-[80px] w-[80%] flex justify-between items-center '>
+    <div className='h-[80px] max-md:h-[44px] w-[80%] max-md:w-[90%] flex justify-between items-center '>
       <div className='flex items-center justify-between w-full'>
-          <Link href={'/'} className='cursor-pointer'><Image src={Logo} alt='logo'/></Link>
+          <Link href={'/'} className='cursor-pointer max-md:w-[80px]'><Image src={Logo} alt='logo'/></Link>
           <ul className='flex items-center gap-4 justify-center w-full max-md:!hidden'>
             <li>
              <Link href={'/request-history'} className='text-[#7A7A7A] p-3'>Request history</Link>
@@ -19,7 +19,7 @@ const Navbar = () => {
             </li>
           </ul>
       </div>
-      <div className='flex items-center gap-2'>
+      <div className='flex items-center gap-4'>
        <BellIcon/>
        <Link href={'/account-settings'} className='bg-neutral-100 rounded-full p-1'><UserIcon/></Link>
       </div>

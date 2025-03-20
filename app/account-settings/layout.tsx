@@ -15,7 +15,7 @@ export default function Layout({
       <div
         className={'w-full'}
       >
-         <div className='h-[64px] flex items-center border border-neutral-100'>
+         <div className='h-[64px] max-md:!h-[52px] flex items-center border-b border-neutral-100'>
    Account Settings
     </div>
         <div className="h-[86px] flex items-center">
@@ -23,7 +23,7 @@ export default function Layout({
     <UserNavArea/>
       </div>  
         </div>
-        {children}
+       <div className="max-w-[904px] w-full">{children}</div> 
        </div>
   );
 }

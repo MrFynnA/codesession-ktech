@@ -56,7 +56,7 @@ console.log('Update failed',err)
         <div className="fixed inset-0 backdrop-blur-[8px] backdrop-brightness-75 flex justify-center items-center z-50 animate-[fadeIn_0.8s_ease] duration-300">
         <div className="bg-white rounded-lg shadow-lg  p-6  flex justify-center text-black max-md:w-[80%] w-[30%]% animate-[pop_0.3s_ease] duration-300">
             {/* Left side: Details Preview */}
-            <div className="h-full space-y-2 md:w-[98%] max-md:w-[90%] relative">
+            <div className="h-full space-y-2 w-[98%] relative">
             <h2 className="text-base">Update {title}</h2>
         <p className='mb-1 text-sm text-neutral-500'>Please fill in the appropriate information</p>
            <div className='absolute right-0 top-0 !cursor-pointer' onClick={()=>closeModal()}><Closebutton/></div> 

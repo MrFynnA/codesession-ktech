@@ -29,8 +29,8 @@ const page = () => {
     <ul className='[&>*]:py-4'>
        {userAccountDetails?.map((item,idx)=><li key={idx} className='flex border-b border-neutral-100 items-end justify-between'>
             <div className='space-y-2'>
-            <div className='text-[#3D3D3D]'>{item.title}</div>
-            <p className='text-[#7A7A7A] text-sm'>{item.discription}</p>
+            <div className='text-[#3D3D3D] max-md:text-sm'>{item.title}</div>
+            <p className='text-[#7A7A7A] text-sm max-md:text-xs'>{item.discription}</p>
             </div>
             <button className='text-[#0130C7] underline pb-1 cursor-pointer' onClick={()=>{}}>Edit</button>
         </li>)}

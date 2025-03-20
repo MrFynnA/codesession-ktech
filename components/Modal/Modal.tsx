@@ -38,15 +38,12 @@ const Modal = ({ isOpen, closeModal, title }:{isOpen?:boolean, closeModal?:any, 
           "Content-Type": "application/json",
         },
        })
-       if (!res.ok) {
-        throw new Error(`Error: ${res.status}`);
-      }
-       const resData = res.json()
+       const resData=res.json()
        console.log(resData)
        console.log('success')
        closeModal()
      }catch(err){
-console.log('Updating failed', err)
+console.log('Update failed',err)
      }
 
 

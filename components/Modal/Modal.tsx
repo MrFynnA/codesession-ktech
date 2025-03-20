@@ -30,14 +30,25 @@ const Modal = ({ isOpen, closeModal, title }:{isOpen?:boolean, closeModal?:any, 
 
      console.log(userData)
 
-      const res =await  fetch('https://fixit-testing.tuulbox.app/api/accounts/6d475484-c5d6-492d-98c7-27b0733806b1/',{
-        method:'PATCH',
-        body:JSON.stringify(userData)
-      })
+     try{
+       const res =await  fetch('https://fixit-testing.tuulbox.app/api/accounts/6d475484-c5d6-492d-98c7-27b0733806b1/',{
+         method:'PATCH',
+         body:JSON.stringify(userData),
+         headers: {
+          "Content-Type": "application/json",
+        },
+       })
+       if (!res.ok) {
+        throw new Error(`Error: ${res.status}`);
+      }
+       const dataa=res.json()
+       console.log(dataa)
+       console.log('success')
+       closeModal()
+     }catch(err){
+console.log('Updating failed', err)
+     }
 
-      const dataa=res.json()
-
-      console.log(dataa)
 
    }
    
@@ -72,10 +83,10 @@ const Modal = ({ isOpen, closeModal, title }:{isOpen?:boolean, closeModal?:any, 
    
             <div className='flex items-center justify-end gap-4'>
             
-            <button onClick={()=>{
+            <button type='button' onClick={()=>{
               closeModal()
             }} className="p-3 rounded-xl shadow-sm hover:bg-opacity-80 transition-all text-sm mt-8 bg-[#E6EAF9] text-[#0130C7] cursor-pointer">Cancel</button>
-            <button className="bg-indigo-400 text-white p-3 shadow-sm rounded-xl hover:bg-opacity-80 transition-all text-sm mt-8 cursor-pointer">Save changes</button>
+            <button type='submit' className="bg-indigo-400 text-white p-3 shadow-sm rounded-xl hover:bg-opacity-80 transition-all text-sm mt-8 cursor-pointer">Save changes</button>
             </div>
             </form>
             </div>

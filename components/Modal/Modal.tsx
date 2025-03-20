@@ -45,7 +45,7 @@ const Modal = ({ isOpen, closeModal }:{isOpen?:boolean, closeModal?:any}) => {
 
   return (
         <div className="fixed inset-0 backdrop-blur-[8px] backdrop-brightness-75 flex justify-center items-center z-50">
-        <div className="bg-white rounded-lg shadow-lg  p-6  flex justify-center text-black max-md:w-[80%] md:w-[30%] md:h-[364px]">
+        <div className="bg-white rounded-lg shadow-lg  p-6  flex justify-center text-black max-md:w-[80%] w-[30%] md:h-[364px]">
             {/* Left side: Details Preview */}
             <div className="h-full space-y-2 md:w-[98%]">
             <h2 className="text-base">Update Name And Address</h2>
@@ -73,8 +73,8 @@ const Modal = ({ isOpen, closeModal }:{isOpen?:boolean, closeModal?:any}) => {
             
             <button onClick={()=>{
               closeModal()
-            }} className="p-3 rounded-xl shadow-sm hover:bg-opacity-80 transition-all text-sm mt-8 bg-[#E6EAF9] text-[#0130C7]">Cancel</button>
-            <button className="bg-indigo-400 text-white p-3 shadow-sm rounded-xl hover:bg-opacity-80 transition-all text-sm mt-8">Save changes</button>
+            }} className="p-3 rounded-xl shadow-sm hover:bg-opacity-80 transition-all text-sm mt-8 bg-[#E6EAF9] text-[#0130C7] cursor-pointer">Cancel</button>
+            <button className="bg-indigo-400 text-white p-3 shadow-sm rounded-xl hover:bg-opacity-80 transition-all text-sm mt-8 cursor-pointer">Save changes</button>
             </div>
             </form>
             </div>

@@ -56,19 +56,19 @@ console.log('Update failed',err)
         <div className="fixed inset-0 backdrop-blur-[8px] backdrop-brightness-75 flex justify-center items-center z-50 animate-[fadeIn_0.8s_ease] duration-300">
         <div className="bg-white rounded-lg shadow-lg  p-6  flex justify-center text-black max-md:w-[80%] w-[30%]% animate-[pop_0.3s_ease] duration-300">
             {/* Left side: Details Preview */}
-            <div className="h-full space-y-2 md:w-[98%] relative">
+            <div className="h-full space-y-2 md:w-[98%] max-md:w-[90%] relative">
             <h2 className="text-base">Update {title}</h2>
         <p className='mb-1 text-sm text-neutral-500'>Please fill in the appropriate information</p>
            <div className='absolute right-0 top-0 !cursor-pointer' onClick={()=>closeModal()}><Closebutton/></div> 
 
-            <div className="space-y-2 mt-8 w-full">
+            <div className="space-y-2 mt-8">
       <form onSubmit={handleSubmit} className='h-full flex flex-col gap-4'>
-        <div className='flex items-center gap-6 [&>*]:flex [&>*]:flex-col justify-center [&>*]:items-start w-full [&>*]:capitalize'>
-        <span className='w-[50%]'>
+        <div className='flex items-center gap-6 w-full [&>*]:flex [&>*]:flex-col justify-center [&>*]:items-start max-md:flex-wrap [&>*]:capitalize'>
+        <span className='w-[50%] max-md:!w-full'>
             <label htmlFor='firstname' className='text-neutral-600'>firsname</label>
             <input type='text' className='border border-neutral-200 rounded-lg p-2 h-10 outline-none placeholder:text-neutral-400' placeholder='Enter firstname' onChange={(e)=>handleValues('firstname',e.target.value)}/>
         </span>
-        <span className='w-[50%]'>
+        <span className='w-[50%] max-md:!w-full'>
             <label htmlFor='lastname' className='text-neutral-600'>lastname</label>   
             <input type='text' className='border border-neutral-200 p-2 rounded-lg h-10 outline-none placeholder:text-neutral-400' placeholder='Enter lastname' onChange={(e)=>handleValues('lastname',e.target.value)}/>
         </span>

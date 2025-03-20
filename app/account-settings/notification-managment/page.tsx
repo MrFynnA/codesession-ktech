@@ -1,10 +1,13 @@
+import React from 'react'
 
-export default function Home() {
+const page = () => {
   return (
     <div>
     <div className='h-[64px] flex items-center'>
-   Home Page
+   Notification Management
     </div>  
       </div>
-  );
+  )
 }
+
+export default page

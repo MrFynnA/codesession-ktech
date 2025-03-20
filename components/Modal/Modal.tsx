@@ -1,10 +1,11 @@
 'use client'
 
 import React, { useState } from 'react';
+import Closebutton from '../icons/Closebutton';
 
 
 
-const Modal = ({ isOpen, closeModal }:{isOpen?:boolean, closeModal?:any}) => {
+const Modal = ({ isOpen, closeModal, title }:{isOpen?:boolean, closeModal?:any, title?:string}) => {
      const [data,setData] = useState({
         firstname:'',
         lastname:'',
@@ -47,10 +48,10 @@ const Modal = ({ isOpen, closeModal }:{isOpen?:boolean, closeModal?:any}) => {
         <div className="fixed inset-0 backdrop-blur-[8px] backdrop-brightness-75 flex justify-center items-center z-50">
         <div className="bg-white rounded-lg shadow-lg  p-6  flex justify-center text-black max-md:w-[80%] w-[30%] md:h-[364px]">
             {/* Left side: Details Preview */}
-            <div className="h-full space-y-2 md:w-[98%]">
-            <h2 className="text-base">Update Name And Address</h2>
+            <div className="h-full space-y-2 md:w-[98%] relative">
+            <h2 className="text-base">Update {title}</h2>
         <p className='mb-1 text-sm text-neutral-500'>Please fill in the appropriate information</p>
-  
+           <div className='absolute right-0 top-0 !cursor-pointer' onClick={()=>closeModal()}><Closebutton/></div> 
 
             <div className="space-y-2 mt-8 w-full">
       <form onSubmit={handleSubmit} className='h-full flex flex-col gap-4'>

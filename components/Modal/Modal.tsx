@@ -41,8 +41,8 @@ const Modal = ({ isOpen, closeModal, title }:{isOpen?:boolean, closeModal?:any, 
        if (!res.ok) {
         throw new Error(`Error: ${res.status}`);
       }
-       const dataa=res.json()
-       console.log(dataa)
+       const resData = res.json()
+       console.log(resData)
        console.log('success')
        closeModal()
      }catch(err){

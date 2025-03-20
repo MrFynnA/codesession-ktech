@@ -63,7 +63,7 @@ console.log('Update failed',err)
 
             <div className="space-y-2 mt-8">
       <form onSubmit={handleSubmit} className='h-full flex flex-col gap-4'>
-        <div className='flex items-center gap-6 w-full [&>*]:flex [&>*]:flex-col justify-center [&>*]:items-start max-md:flex-wrap [&>*]:capitalize'>
+        <div className='flex items-center gap-6 w-full [&>*]:flex [&>*]:flex-col justify-center max-md:flex-wrap [&>*]:capitalize'>
         <span className='w-[50%] max-md:!w-full'>
             <label htmlFor='firstname' className='text-neutral-600'>firsname</label>
             <input type='text' className='border border-neutral-200 rounded-lg p-2 h-10 outline-none placeholder:text-neutral-400' placeholder='Enter firstname' onChange={(e)=>handleValues('firstname',e.target.value)}/>
